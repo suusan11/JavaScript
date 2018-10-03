@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <input type="text" id="isPrime" name="findPrime" value="">
+    <input type="button" onclick="findPrime();" name="testPrime" value="Find Prime Number">
+
+
+
+    <script>
+        // var num;
+        // var counter = 1000;
+        // for (var i = 2; i < counter; i++) {
+        //     if(num % i == 0) {
+        //         console.log(true);
+        //     }else {
+        //         console.log(false);
+        //     }
+        // }
+
+        // function isPrime(num) {
+        //     if(num === 2) {
+        //         return true;
+        //     }else if (num > 1) {
+        //         for(var i = 2; i < num; i++) {
+        //             if(num % i !== 0) {
+        //                 return true;
+        //             }else if(num === i * i) {
+        //                 return false;
+        //             }else {
+        //                 return false;
+        //             }
+        //         }
+        //     }
+        //     else {
+        //         return false;
+        //     }
+        // // }
+        //
+        // console.log(isPrime(4));
+
+        // var inputNumber = parseInt(prompt("Enter the number grater than 0."));
+        // document.write(inputNumber);
+
+
+
+        function findPrime() {
+            var number = document.getElementById("isPrime").value;
+
+            var t0 = performance.now();
+            timeToFindPrime();
+
+            for(var i = 1; i <= number; i++) {
+                testPrime(i);
+
+                var t1 = performance.now();
+
+                if(testPrime(i) === true) {
+                    console.log(i);
+                }
+            }
+            console.log("It takes " + (t1 - t0) + " milliseconds.")
+        }
+
+        function testPrime(testNumber) {
+            for(var i = 2; i < testNumber; i++) {
+                if(testNumber % i === 0) {
+                    return false;
+                }
+            }
+            return testNumber > 1;
+        }
+
+
+
+    </script>
+</body>
+</html>

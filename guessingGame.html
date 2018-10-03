@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guessing game</title>
+</head>
+<body>
+
+
+    <script>
+        const questions = ["STEP:1 Choose any number in your brain",
+            "STEP:2 multiple with 2",
+            "STEP:3 add the number which shows",
+            "STEP:4 divide by 2",
+            "STEP:5 subtract the number which you chose",
+            "STEP6: Your number is"];
+
+
+        main();
+
+        function showMSG(text) {
+                prompt(text);
+        }
+
+        function step1() {
+            showMSG(questions[0]);
+        }
+
+        function step2() {
+            showMSG(questions[1]);
+        }
+
+        function step3(text) {
+            showMSG(questions[2] + text);
+        }
+
+        function step4() {
+            showMSG(questions[3]);
+        }
+
+        function step5() {
+            showMSG(questions[4]);
+        }
+
+        function step6(text) {
+            showMSG(questions[5] + (text / 2));
+        }
+
+        function main() {
+            var number = randomIntFromInterval(1,100);
+            if(number % 2 !== 0) {
+                 number++;
+            }
+
+            step1();
+            step2();
+            step3(number);
+            step4();
+            step5();
+            step6(number);
+        }
+
+        function randomIntFromInterval(min,max) // min and max included
+        {
+            return Math.floor(Math.random()*(max-min+1)+min);
+        }
+    </script>
+</body>
+</html>
