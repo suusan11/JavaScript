@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function vs class</title>
+</head>
+<body>
+<script>
+    //function
+    function makeTaiyaki(gu) {
+        let a = gu;
+        console.log("Making " + a + " no Taiyaki!");
+    }
+    makeTaiyaki("Koshian");
+    makeTaiyaki("Tsubuan");
+    makeTaiyaki("Shiroan");
+
+
+
+    //class
+    class Taiyaki {
+        constructor(gu) {
+            this.gu = gu;
+        }
+        make() {
+            console.log("Making " + this.gu + " no Taiyaki!");
+        }
+        soldOut() {
+            console.log(this.gu + " is sold out.");
+        }
+        dekitate() {
+            console.log(this.gu + " ha dekitate.");
+        }
+    }
+
+    const koshian = new Taiyaki("Koshian");
+    koshian.make();
+
+    const tsubuan = new Taiyaki("Tsubuan");
+    tsubuan.soldOut();
+
+    const shiroan = new Taiyaki("Shiroan");
+    shiroan.make();
+    shiroan.dekitate();
+</script>
+</body>
+</html>
