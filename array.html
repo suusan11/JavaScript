@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        var myArray = [1, 2, 3];
+        var count = 0;
+        for(count = 0; count <= 1000; count++) {
+            myArray.push(count);
+        }
+
+        if(myArray.length !== 1000) {
+            console.log('ERROR');
+        }
+
+        while(myArray.length !== 0) {
+            myArray.shift();
+        }
+
+        var num = 0;
+        for(num = 0; num <= 1000; num++) {
+            myArray.push(toString());
+        }
+
+        // class Rectangle {
+        //     constructor(height, width) {
+        //         this.height = height;
+        //         this.width = width;
+        //     }
+        // }
+        //
+        // class Person {
+        //     constructor(firstName, lastName, email) {
+        //         this.firstName = firstName;
+        //         this.lastName = lastName;
+        //         this.email = email
+        //     }
+        // }
+
+        let Rectangle = class {
+            constructor(height, width) {
+                this.height = height;
+                this.width = width;
+            }
+        };
+
+        let Person = class{
+            constructor(firstName, lastName, email) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.email = email
+            }
+        }
+
+        var testPerson = new Person('Ivan', 'Malone', 'ivanincanada@gmail.com');
+        // var testPerson = "ivan malone";
+
+        class Person {
+        }
+        person.firstName = "ssds";
+        // console.log(testPerson);
+        console.log(testPerson.firstName);
+
+
+        function getData() {
+            var URL = 'https://raw.githubusercontent.com/MatthiasWinkelmann/firstname-database/master/firstnames.csv';
+        }
+
+        function downloadData(fromURL) {
+            var client = new XMLHttpRequest();
+            client.open('GET', '/foo.txt');
+            client.onreadystatechange = function() {
+                alert(client.responseText);
+        }
+        const mydata = downloadData(fromURL);
+    </script>
+</body>
+</html>
