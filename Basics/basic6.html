@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>leap year</title>
+</head>
+<body>
+<script>
+    year = window.prompt("Input a year : ");
+    x = (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
+    console.log(x);
+</script>
+</body>
+</html>
