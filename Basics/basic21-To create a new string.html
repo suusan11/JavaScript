@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To create a new string</title>
+</head>
+<body>
+<script>
+    function stringCheck(str) {
+        if (str === null || str === undefined || str.substring(0, 2) === 'Py') {
+            return str;
+        }else {
+            return "Py" + str;
+        }
+    }
+
+    console.log(stringCheck("Python"));
+    console.log(stringCheck("thon"));
+</script>
+</body>
+</html>
