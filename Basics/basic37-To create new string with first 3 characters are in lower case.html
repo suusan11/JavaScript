@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To create new string with first 3 characters are in lower case</title>
+</head>
+<body>
+<script>
+    function upperLower(str) {
+        if(str.length < 3) {
+            return str.toUpperCase();
+        }
+        frontString = (str.substring(0, 3)).toLowerCase();
+        backString = str.substring(3, str.length);
+        return frontString + backString;
+    }
+
+    console.log(upperLower("Python"));
+    console.log(upperLower("Py"));
+    console.log(upperLower("JAVAScript"));
+</script>
+</body>
+</html>
