@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To check a given string contains 2 to 4 numbers of a specified character</title>
+</head>
+<body>
+<script>
+    function checkString(str, char) {
+        ctr = 0;
+        for(let i = 0; i < str.length; i++) {
+            if(str.charAt(i) === char) {
+                ctr++;
+            }
+        }return (ctr >= 2 && ctr <= 4);
+    }
+
+    console.log(checkString("Python", "y"));
+    console.log(checkString("JavaScript", "a"));
+    console.log(checkString("Console", "o"));
+</script>
+</body>
+</html>

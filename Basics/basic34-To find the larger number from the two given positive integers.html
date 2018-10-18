@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To find the larger number from the two given positive integers</title>
+</head>
+<body>
+<script>
+    function max(x, y) {
+        if(x >= 40 && y <= 60) {
+            let max = 0;
+            if(x > y) {
+                max = x;
+            }else {
+                max = y;
+                return max;
+            }
+        }else
+            return false;
+    }
+
+    console.log(max(45, 60));
+    console.log(max(25, 60));
+    console.log(max(45, 80));
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To check if two numbers are in range 40..60 or in the range 70..100</title>
+</head>
+<body>
+<script>
+    function numbersRanges(x, y) {
+        if((x >= 40 && x <= 60 && y >= 40 && y <= 60) || (x >= 70 && x <= 100 && y >= 70 && y <= 100)) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    console.log(numbersRanges(44, 56));
+    console.log(numbersRanges(70, 95));
+    console.log(numbersRanges(50, 89));
+</script>
+</body>
+</html>

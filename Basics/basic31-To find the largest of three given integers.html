@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To find the largest of three given integersTitle</title>
+</head>
+<body>
+<script>
+    function largestNumber(x, y, z) {
+        max = 0;
+        if(x > y) {
+            max = x;
+        }else {
+            max = y;
+        }
+        if(z > max) {
+            max = z;
+        }return max;
+    }
+
+    console.log(largestNumber(1, 0, 1));
+    console.log(largestNumber(0, -10, -20));
+    console.log(largestNumber(1000, 510, 440));
+</script>
+</body>
+</html>

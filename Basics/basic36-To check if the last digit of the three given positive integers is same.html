@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To check if the last digit of the three given positive integers is same</title>
+</head>
+<body>
+<script>
+    function lastDagit(x, y, z) {
+        if((x > 0) && y > 0 && z > 0) {
+            return (x % 10 === y % 10 && y % 10 === z % 10 && x % 10 === z % 10);
+        }else
+            return false;
+    }
+
+    console.log(lastDagit(20, 30, 400));
+    console.log(lastDagit(-20, 30, 400));
+    console.log(lastDagit(20, -30, 400));
+    console.log(lastDagit(20, 30, -400));
+</script>
+</body>
+</html>
