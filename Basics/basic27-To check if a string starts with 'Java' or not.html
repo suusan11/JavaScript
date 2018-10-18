@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To check if a string starts with 'Java' or not</title>
+</head>
+<body>
+<script>
+    function checkString(str) {
+        if(str.length < 4) {
+            return false;
+        }
+        front = str.substring(0, 4);
+        if(front === "Java") {
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    console.log(checkString("JavaScript"));
+    console.log(checkString("Java"));
+    console.log(checkString("Python"));
+    console.log(checkString("C"));
+</script>
+</body>
+</html>
