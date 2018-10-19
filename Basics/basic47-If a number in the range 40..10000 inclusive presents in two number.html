@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>If a number in the range 40..10000 inclusive presents in two number</title>
+</head>
+<body>
+<script>
+    function checkNumbers(x, y, z) {
+        if(z < 40 || z > 10000)
+            return false;
+        else if(z >= x && z <= y)
+            return true;
+        else
+            return false;
+    }
+
+    console.log(checkNumbers(40, 4000, 45));
+    console.log(checkNumbers(80, 320, 79));
+    console.log(checkNumbers(89, 4000, 30));
+</script>
+</body>
+</html>

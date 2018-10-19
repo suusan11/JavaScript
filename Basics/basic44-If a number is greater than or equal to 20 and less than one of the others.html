@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>If a number is greater than or equal to 20 and less than one of the others</title>
+</head>
+<body>
+<script>
+    function checkNumbers(x, y, z) {
+        return (x >= 20) && (x < y || x < z) || (y >= 20) && (y < x || y < z) || (z >= 20) &&
+            (z < x || z < y)
+    }
+
+    console.log(checkNumbers(23, 45, 10));
+    console.log(checkNumbers(23, 23, 10));
+    console.log(checkNumbers(21, 66, 75));
+</script>
+</body>
+</html>
