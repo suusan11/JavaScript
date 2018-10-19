@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To check from three given numbers</title>
+</head>
+<body>
+<script>
+    function sameLastDigit(x, y, z) {
+        return (x % 10 === y % 10) || (x % 10 === z % 10) || (y % 10 === z % 10);
+    }
+
+    console.log(sameLastDigit(22, 32, 42));
+    console.log(sameLastDigit(102, 302, 2));
+    console.log(sameLastDigit(20, 22, 45));
+</script>
+</body>
+</html>

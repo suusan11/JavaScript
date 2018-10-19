@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To check if three given numbers (integers) are increasing in strict mode</title>
+</head>
+<body>
+<script>
+    function numberOrder(x, y, z) {
+        if(y > x && z > y) {
+            return "Strict mode";
+        }else if(z > y) {
+            return "Soft mode"
+        }else {
+            return "Undefinded";
+        }
+    }
+
+    console.log(numberOrder(10, 15, 31));
+    console.log(numberOrder(24, 22, 31));
+    console.log(numberOrder(50, 21, 15));
+</script>
+</body>
+</html>
