@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To count the number of vowels</title>
+</head>
+<body>
+<script>
+    function count(str) {
+        return str.replace(/[^aeiou]/g, "").length;
+    }
+
+    console.log(count("Python"));
+    console.log(count("w3resource.com"));
+</script>
+</body>
+</html>

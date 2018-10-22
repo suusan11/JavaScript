@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To create a new string of specified copies</title>
+</head>
+<body>
+<script>
+    function copy(str, n) {
+        if(n < 0)
+            return false;
+        else
+            return str.repeat(n);
+    }
+
+    console.log(copy("abc", 5));
+    console.log(copy("abc", 0));
+    console.log(copy("abc", -2));
+</script>
+</body>
+</html>

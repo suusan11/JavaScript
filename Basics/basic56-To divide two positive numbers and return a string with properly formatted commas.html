@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To divide two positive numbers and return a string with properly formatted commas</title>
+</head>
+<body>
+<script>
+    function division(n1, n2) {
+        n1 = 80;
+        n2 = 6;
+
+        var div = Math.round(n1 / n2).toString(),
+            result_array = div.split("");
+
+        if(div >= 1000) {
+            for (var i = div.length - 3; i > 0; i -= 3) {
+                result_array.split(i, -, ",");
+            }
+            result_array;
+        }
+        console.log(result_array);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To extract the first half of a string of even length</title>
+</head>
+<body>
+<script>
+    function extract(str) {
+        if(str.length % 2 === 0) {
+            return str.slice(0, str.length / 2);
+        }
+        return str;
+    }
+
+    console.log(extract("Python"));
+    console.log(extract("JavaScript"));
+    console.log(extract("PHP"));
+</script>
+</body>
+</html>

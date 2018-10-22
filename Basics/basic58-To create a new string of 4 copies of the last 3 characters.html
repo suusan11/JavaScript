@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To create a new string of 4 copies of the last 3 characters</title>
+</head>
+<body>
+<script>
+    function newString(str) {
+        if(str.length >= 3) {
+            result = str.substring(str.length - 3);
+            return result + result + result + result;
+        }
+        else
+            return false;
+    }
+
+    console.log(newString("Python 3.0"));
+    console.log(newString("JS"));
+    console.log(newString("JavaScript"));
+</script>
+</body>
+</html>
