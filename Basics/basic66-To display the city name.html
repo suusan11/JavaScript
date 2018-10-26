@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>To display the city name</title>
 </head>
 <body>
-$END$
+<script>
+    function cityName(str) {
+        if(str.length >= 3 && (str.substring(0,3) == 'Los') || (str.substring(0,3) == 'New')) {
+            return str;
+        }
+        return '';
+    }
+
+    console.log(cityName("New York"));
+    console.log(cityName("Los Angels"));
+    console.log(cityName("London"));
+</script>
 </body>
 </html>

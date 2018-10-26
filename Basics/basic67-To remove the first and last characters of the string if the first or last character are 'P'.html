@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>To remove the first and last characters of the string if the first or last character are 'P'</title>
 </head>
 <body>
-$END$
+<script>
+    function remove(str) {
+        let start_pos = 0;
+        let end_pos = str.length;
+
+        if(str.length > 0 && str.charAt(0) == 'P') {
+            start_pos = 1;
+        }
+
+        if(str.length > 1 && str.charAt(str.length - 1) == 'P') {
+            end_pos--;
+        }
+        return str.substring(start_pos, end_pos);
+    }
+
+    console.log(remove("PythonP"));
+    console.log(remove("Python"));
+    console.log(remove("JavaScript"));
+
+</script>
 </body>
 </html>
