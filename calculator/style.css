@@ -1,0 +1,57 @@
+
+body {
+    width: 500px;
+    margin: 4% auto;
+}
+
+table {
+    width: 300px;
+    height: 450px;
+    margin: 100px auto;
+    padding: 20px 10px;
+    background-color: #CBC2FF;
+    border: 1px solid #CBC2FF;
+    text-align: center;
+}
+
+td {
+    width: 70px;
+}
+
+input.inputDisplay {
+    width: 95%;
+    height: 60px;
+    text-align: right;
+    border: transparent;
+    margin-bottom: 28px;
+}
+
+input:not(.inputDisplay){
+    width: 50px;
+    padding: 20px;
+    border: transparent;
+    border-radius: 3%;
+    cursor: pointer;
+}
+
+input.operator {
+    background-color: #FFC8DE;
+}
+
+input.number {
+    background-color: #A7F5FF;
+}
+
+input.number-zero {
+    width: 125px;
+    text-align: left;
+}
+
+input.equal {
+    height: 180px;
+    background-color: #FFC8DE;
+}
+
+input.clear {
+    background-color: #FFF5BA;
+}
