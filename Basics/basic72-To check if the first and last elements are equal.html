@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To check if the first and last elements are equal</title>
+</head>
+<body>
+<script>
+    function checkSameNumbers(nums) {
+        const end = nums.length - 1;
+        if(nums.length >= 1) {
+            return nums[0] == nums[end];
+        }else {
+            return false;
+        }
+    }
+
+    console.log(checkSameNumbers([10, 20, 30]));
+    console.log(checkSameNumbers([10, 20, 30, 10]));
+    console.log(checkSameNumbers([20, 20, 20]));
+</script>
+</body>
+</html>

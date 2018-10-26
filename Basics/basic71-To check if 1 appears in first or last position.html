@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To check if 1 appears in first or last position </title>
+</head>
+<body>
+<script>
+    function checkNumbers(nums) {
+        var end_pos = nums.length - 1;
+        return nums[0] == 1 || nums[end_pos] == 1;
+    }
+
+    console.log(checkNumbers([1, 3, 5]));
+    console.log(checkNumbers([1, 3, 5, 1]));
+    console.log(checkNumbers([2, 4, 6]));
+</script>
+</body>
+</html>
