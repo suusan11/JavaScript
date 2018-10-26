@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To create a new string using the first and last n characters</title>
+</head>
+<body>
+<script>
+    function twoString(str, n) {
+        firstPart = str.substring(0, n);
+        lastPart = str.substring(str.length - n);
+        return firstPart + lastPart;
+    }
+
+    console.log(twoString("JavaScript", 2));
+    console.log(twoString("JavaScript", 3));
+</script>
+</body>
+</html>
