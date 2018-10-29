@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To find the larger value between the first or last and set all the other elements with that value</title>
+</head>
+<body>
+<script>
+    function max(nums) {
+        const maxValue = nums[0] > nums[2] ? nums[0] :nums[2];
+
+        nums[0] = maxValue;
+        nums[1] = maxValue;
+        nums[2] = maxValue;
+
+        return nums;
+    }
+
+    console.log(max([20, 30, 40]));
+    console.log(max([-7, -9, 0]));
+    console.log(max([12, 10, 3]));
+</script>
+</body>
+</html>
