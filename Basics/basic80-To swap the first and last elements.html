@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To swap the first and last elements</title>
+</head>
+<body>
+<script>
+    function swap(array) {
+        array[0], array[array.length - 1] = [array[array.length - 1], array[0]];
+        return array;
+    }
+
+    console.log(swap([1, 2, 3, 4]));
+    console.log(swap([0, 2, 1]));
+    console.log(swap([3]));
+</script>
+</body>
+</html>

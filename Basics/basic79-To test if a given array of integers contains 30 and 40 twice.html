@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To test if a given array of integers contains 30 and 40 twice</title>
+</head>
+<body>
+<script>
+    function twice(array1) {
+        let a = array1[0];
+        let b = array1[1];
+        return (a === 30 && b === 30) || (a === 40 && b === 40);
+    }
+
+    console.log(twice([30, 30]));
+    console.log(twice([40, 40]));
+    console.log(twice([20, 20]));
+    console.log(twice([30]));
+</script>
+</body>
+</html>
