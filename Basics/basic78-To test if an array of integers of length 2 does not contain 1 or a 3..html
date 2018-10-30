@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To test if an array of integers of length 2 does not contain 1 or a 3.</title>
+</head>
+<body>
+<script>
+    function is13(nums) {
+        if(!nums.includes(1) && !nums.includes(3)) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    console.log(is13([7, 8]));
+    console.log(is13([3, 2]));
+    console.log(is13([0, 1]));
+</script>
+</body>
+</html>
