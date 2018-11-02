@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To find the longest string</title>
+</head>
+<body>
+<script>
+    function longestString(string) {
+        var max = string[0].length;
+        string.map(v => max = Math.max(max, v.length));
+        var result = string.filter(v => v.length == max);
+        return result;
+    }
+
+    console.log(longestString(['a', 'aa', 'aaa']));
+</script>
+</body>
+</html>
