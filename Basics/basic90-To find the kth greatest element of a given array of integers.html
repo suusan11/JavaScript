@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To find the kth greatest element of a given array of integers </title>
+</head>
+<body>
+<script>
+    function kthGrqtestInArray(arr, k) {
+        for(let i = 0; i < k; i++) {
+            let maxIndex = i;
+            const temp = arr[i];
+
+            for(let j = i + 1; j < arr.length; j++) {
+                if(arr[j] > arr[maxIndex]) {
+                    maxIndex = j;
+                }
+            }
+
+            arr[i] = arr[maxIndex];
+            arr[maxIndex] = temp;
+        }
+        return arr[k - 1];
+    }
+
+    console.log(kthGrqtestInArray([1, 2, 3, 4, 5], 3));
+    console.log(kthGrqtestInArray([-10, -25, -47, -36, 0], 1));
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To check whether two given integers are similar or not</title>
+</head>
+<body>
+<script>
+    function checking(x, y, z) {
+        return x + y == z || x * y == z || x / y == z || x - y == z;
+    }
+
+    console.log(checking(10, 25, 35));
+    console.log(checking(10, 25, 250));
+    console.log(checking(30, 25, 5));
+    console.log(checking(100, 25, 4.0));
+    console.log(checking(100, 25, 25));
+</script>
+</body>
+</html>
