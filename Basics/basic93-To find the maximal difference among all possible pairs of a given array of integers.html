@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To find the maximal difference among all possible pairs of a given array of integers</title>
+</head>
+<body>
+<script>
+    function arrayMaxDiffreance(arr) {
+        let maxResult = 0;
+        for(let i = 0; i < arr.length; i++) {
+            for(let k = 0; k !== i && k < arr.length; k++) {
+                const diffrence = Math.abs(arr[i] - arr[k]);
+                maxResult = Math.max(maxResult, diffrence);
+            }
+        }
+        return maxResult;
+    }
+
+    console.log(arrayMaxDiffreance([1, 2, 3, 8, 9]));
+    console.log(arrayMaxDiffreance([1, 2, 3, 18, 9]));
+    console.log(arrayMaxDiffreance([13, 2, 3, 8, 9]));
+</script>
+</body>
+</html>
