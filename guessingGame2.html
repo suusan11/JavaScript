@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess Game</title>
+
+    <style>
+        body {
+            width: 100%;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        .container {
+            margin-top: 150px;
+        }
+
+        .rule {
+            display: inline-block;
+            width: 300px;
+            padding: 20px;
+            border: 2px solid #02547D;
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        .rule h2 {
+            text-align: center;
+        }
+
+        .container__input {
+            margin-top: 50px;
+        }
+
+        input {
+            border: 2px solid #02547D;
+            border-radius: 5px;
+            padding: 15px 20px;
+            margin-right: 10px;
+        }
+
+        button {
+            width: 100px;
+            padding: 15px 20px;
+            border-radius: 5px;
+            background-color: #02547D;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .result {
+            width: 300px;
+            margin: 50px auto;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to Guess Game</h1>
+    <div class="rule">
+    <h2>How to</h2>
+        <ul>
+            <li>Guess a number 0 to 100</li>
+            <li>Input the number and click a button</li>
+        </ul>
+    </div>
+    <div class="container__input">
+        <input id="js-inputNumber" type="text">
+        <button id="js-sendNumber">Result</button>
+    </div>
+    <div id="js-showResult" class="result"></div>
+</div>
+<script>
+
+    function showResult() {
+        var inputNumber = parseInt(document.getElementById("js-inputNumber").value);
+        var num = Math.floor(Math.random () * 10) + 1;
+
+        if(inputNumber === num) {
+            document.getElementById("js-showResult").innerHTML = "Awesome :)"
+        }else {
+            document.getElementById("js-showResult").innerHTML = "Sorry :("
+        }
+    }
+
+    document.getElementById("js-sendNumber").addEventListener("click", showResult);
+</script>
+</body>
+</html>
