@@ -1,0 +1,29 @@
+body {
+    width: 100%;
+}
+
+.countdown-container {
+    text-align: center;
+}
+
+.countdown-container h1 {
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 3em;
+    letter-spacing: 5px;
+    padding: 2%;
+}
+
+#js-show-countdown {
+    font-size: 3em;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.countdown-container img {
+    width: 30%;
+    animation: bounce .5s ease-out infinite;
+}
+
+@keyframes bounce {
+    to {transform: translateY(-5px);}
+    from {transform: translateY(0);}
+}

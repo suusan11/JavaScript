@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas|Quicksand" rel="stylesheet">
+    <title>Christmas Countdown</title>
+</head>
+<body>
+    <div class="countdown-container">
+        <h1 id="js-text">Santa is on his way</h1>
+        <img src="christmas-car.jpg" alt="christmas car">
+        <div id="js-show-countdown"></div>
+    </div>
+
+    <script type="text/javascript">
+        const text = document.getElementById('js-text');
+
+        for(let i = 0; i < text.length; i ++) {
+            let char = text[i];
+            if(char % 2 ===0) {
+                document.getElementById('js-text').style.color = rgb(179, 0, 12);
+            }else {
+                document.getElementById('js-text').style.color = rgb(179, 0, 15);
+            }
+        }
+
+        const christmas = new Date("December 25, 2018 00:00:00");
+
+        const countdown = setInterval(function () {
+            const now = new Date().getTime();
+            const difference = christmas - now;
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            if(difference > 0) {
+                document.getElementById("js-show-countdown").innerHTML = days + "days " + hours + "hr " + minutes + "min " + seconds + "sec ";
+            } else if(difference === 0) {
+                document.getElementById("js-show-countdown").innerHTML = "Merry Christmas!";
+            }else {
+                document.getElementById("js-show-countdown").innerHTML = "Santa has gone! See you next year!";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
